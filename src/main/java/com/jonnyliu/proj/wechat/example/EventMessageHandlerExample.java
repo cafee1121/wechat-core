@@ -27,7 +27,7 @@ import java.util.Map;
  * User: jonnyliu@tcl.com <br/>
  * Date: on 2016-08-22 13:47.
  */
-@MessageWorker(type = MessageType.EVENT)
+@MessageWorker(messageType = MessageType.EVENT)
 public class EventMessageHandlerExample extends AbstractMessageHandler {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EventMessageHandlerExample.class);
@@ -92,7 +92,7 @@ public class EventMessageHandlerExample extends AbstractMessageHandler {
 
             }
         } else {
-            LOGGER.error("no message type: [{}] found.", baseRequestMessage);
+            LOGGER.error("no message messageType: [{}] found.", baseRequestMessage);
         }
         return null;
     }
