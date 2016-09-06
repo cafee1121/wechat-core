@@ -36,7 +36,7 @@ public class EventMessageHandlerExample extends AbstractMessageHandler {
     public BaseResponseMessage doHandleMessage(BaseRequestMessage baseRequestMessage) {
         //（取消）关注事件消息
         if (baseRequestMessage instanceof SubOrUnSubEventRequestMessage) {
-
+  
             SubOrUnSubEventRequestMessage subOrUnSubEventRequestMessage = (SubOrUnSubEventRequestMessage) baseRequestMessage;
             String event = subOrUnSubEventRequestMessage.getEvent();
             EventType eventType = EventType.valueBy(event);
